@@ -1,0 +1,11 @@
+{
+  "name": "data-analysis",
+  "version": "1.0.0",
+  "description": "AI駆動データ分析プラグイン。要件定義・EDA・特徴量・モデリング・評価・運用を恣意的分析禁止ガイドライン(GL-1〜GL-10)に従って支援します。",
+  "author": {
+    "name": "あなたの名前",
+    "email": "あなたのメール@example.com"
+  },
+  "license": "MIT",
+  "keywords": ["data-analysis", "statistics", "machine-learning", "anti-bias"]
+}
