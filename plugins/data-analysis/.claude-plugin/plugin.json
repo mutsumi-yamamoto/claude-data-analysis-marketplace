@@ -19,7 +19,7 @@
     "kpi",
     "feature-engineering"
   ],
-  "agents": ["./agents/"],
+  "agents": ["./agents/data-analyst.md"],
   "commands": ["./commands/"],
   "skills": ["./skills/"]
 }
