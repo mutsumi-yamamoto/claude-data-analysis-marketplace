@@ -19,7 +19,7 @@
     "kpi",
     "feature-engineering"
   ],
-  "agents": "./agents/",
+  "agents": ["./agents/"],
   "commands": ["./commands/"],
-  "skills": "./skills/"
+  "skills": ["./skills/"]
 }
