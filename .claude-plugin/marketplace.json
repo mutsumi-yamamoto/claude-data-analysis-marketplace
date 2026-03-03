@@ -1,25 +1,25 @@
 {
-    "name": "data-analysis-marketplace",
-    "owner": {
-      "name": "あなたの名前",
-      "email": "あなたのメール@example.com"
-    },
-    "metadata": {
-      "description": "AI-driven data analysis plugin with anti-bias guidelines",
-      "version": "1.0.0"
-    },
-    "plugins": [
-      {
-        "name": "data-analysis",
-        "source": "./plugins/data-analysis",
-        "description": "要件定義からモデル運用まで、恣意的分析禁止ガイドライン準拠のAI駆動データ分析",
-        "version": "1.0.0",
-        "author": {
-          "name": "あなたの名前"
-        },
-        "category": "data-science",
-        "tags": ["data-analysis", "machine-learning", "statistics", "anti-bias"],
-        "license": "MIT"
-      }
-    ]
-  }
+  "name": "data-analysis-marketplace",
+  "owner": {
+    "name": "あなたの名前",
+    "email": "あなたのメール@example.com"
+  },
+  "metadata": {
+    "description": "CRISP-DM拡張フレームワーク × 戦略コンサルタント行動規範に基づくデータ分析プラグインのマーケットプレイス",
+    "version": "2.0.0"
+  },
+  "plugins": [
+    {
+      "name": "data-analysis",
+      "source": "./plugins/data-analysis",
+      "description": "CRISP-DM拡張フレームワーク（Phase 0〜8）に従い、恣意的分析禁止ガイドライン（GL-1〜GL-10）準拠のデータ分析を行うプラグイン。analysis_context.md をSSOTとして管理し、戦略コンサルタント行動規範で示唆出しまで支援します。",
+      "version": "2.0.0",
+      "author": {
+        "name": "あなたの名前"
+      },
+      "category": "data-science",
+      "tags": ["data-analysis", "machine-learning", "statistics", "anti-bias", "crisp-dm", "consulting", "kpi"],
+      "license": "MIT"
+    }
+  ]
+}

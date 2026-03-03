@@ -1,11 +1,25 @@
 {
   "name": "data-analysis",
-  "version": "1.0.0",
-  "description": "AI駆動データ分析プラグイン。要件定義・EDA・特徴量・モデリング・評価・運用を恣意的分析禁止ガイドライン(GL-1〜GL-10)に従って支援します。",
+  "version": "2.0.0",
+  "description": "CRISP-DM拡張フレームワーク × 戦略コンサルタント行動規範に基づくデータ分析プラグイン。analysis_context.md をSSOTとして全フェーズ（Phase 0-8）を体系的に支援します。",
   "author": {
     "name": "あなたの名前",
     "email": "あなたのメール@example.com"
   },
+  "homepage": "https://github.com/あなたのGitHubユーザー名/claude-data-analysis-marketplace",
+  "repository": "https://github.com/あなたのGitHubユーザー名/claude-data-analysis-marketplace",
   "license": "MIT",
-  "keywords": ["data-analysis", "statistics", "machine-learning", "anti-bias"]
+  "keywords": [
+    "data-analysis",
+    "statistics",
+    "machine-learning",
+    "crisp-dm",
+    "anti-bias",
+    "consulting",
+    "kpi",
+    "feature-engineering"
+  ],
+  "agents": "./agents/",
+  "commands": ["./commands/"],
+  "skills": "./skills/"
 }
