@@ -34,6 +34,12 @@ data/docs/             # 分析レポート・可視化の出力先
 
 ## 利用可能なスキル（スラッシュコマンド）
 
+### 戦略・要件定義・提案フェーズ（コンサルティング品質）
+| コマンド | 役割 |
+|---------|------|
+| `/data-analysis:data-requirements` | ミーティングメモ→**要件定義書**（Issue Tree・UCマトリクス・インパクト試算） |
+| `/data-analysis:data-proposal` | 要件定義書→**戦略提案資料**（SCQ・ROI・ロードマップ） |
+
 ### 準備・定義フェーズ
 | コマンド | 役割 |
 |---------|------|
@@ -52,8 +58,14 @@ data/docs/             # 分析レポート・可視化の出力先
 | `/data-analysis:data-model` | Phase 6: 分析・モデリング |
 | `/data-analysis:data-interpret` | Phase 7-8: 結果解釈・レポート作成 |
 
-### 推奨実行順（新規プロジェクト）
+### 推奨実行順（コンサルティング案件・新規プロジェクト）
 ```
+[要件定義・提案が必要な場合]
+/data-requirements（ミーティングメモを貼り付け）
+→ /data-proposal（提案書の作成）
+→ /data-define（KPI・Issue Tree の深掘り）
+
+[データ分析が主目的の場合]
 /data-context → /data-define → /data-collect → /data-integrate
 → /data-explore → /data-clean → /data-feature → /data-model → /data-interpret
 ```

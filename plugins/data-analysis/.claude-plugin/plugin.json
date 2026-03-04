@@ -1,7 +1,7 @@
 {
   "name": "data-analysis",
-  "version": "2.0.0",
-  "description": "CRISP-DM拡張フレームワーク × 戦略コンサルタント行動規範に基づくデータ分析プラグイン。analysis_context.md をSSOTとして全フェーズ（Phase 0-8）を体系的に支援します。",
+  "version": "2.2.0",
+  "description": "CRISP-DM拡張フレームワーク × 戦略コンサルタント行動規範に基づくデータ分析プラグイン。多様な入力形態（CSV/PDF/議事録/Excel）のコンテキスト読み取りから、戦コンレベルの要件定義・提案資料作成（SCQ/ROI/ロードマップ）、シニアDS/DEレベルの全分析フェーズ（EDA・クレンジング・特徴量・モデリング・時系列・因果推論・SHAP）まで一気通貫で支援します。",
   "author": {
     "name": "あなたの名前",
     "email": "あなたのメール@example.com"
