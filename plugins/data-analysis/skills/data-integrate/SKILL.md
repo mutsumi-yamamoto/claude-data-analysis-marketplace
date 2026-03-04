@@ -118,6 +118,45 @@ print(f"保存完了: {len(df):,} 件")
 
 ---
 
-統合の結果と結合計画を `analysis_context.md` の「データ統合情報」セクションに記録すること。
+## 📝 実行ログの記録（必須）
+
+`analysis_context.md` の「データ統合情報」セクションを更新し、「12. 実行ログ」末尾に以下のテンプレートを埋めて追記すること。
+
+```
+### YYYY-MM-DD HH:MM | data-integrate
+| 項目 | 内容 |
+|------|------|
+| ステータス | 完了 / 一部完了 / 中断 |
+| 実施内容 | [結合処理・整合性検証・Fan-out確認] |
+| 結合ソース数 | [件数] |
+| 結合前件数 | [各テーブルの件数] |
+| 結合後件数 | [件数（Fan-out有無を明記）] |
+| 結合キー | [結合に使用したキー列名] |
+| 整合性問題 | [不一致・欠損・重複等の件数と対処] |
+| 問題・懸念 | [解決できなかった問題] |
+| 申し送り | [EDAで特に確認すべき統合起因の問題] |
+| 生成ファイル | `data/analysis_table.csv` |
+```
+
+---
+
+## ✅ 完了後: 次の推奨アクション（必須）
+
+上記の実行が完了したら、**必ず**以下をユーザーに提示すること。
+
+**✅ data-integrate が完了しました**
+📁 生成ファイル: `data/analysis_table.csv`
+📋 `analysis_context.md` の「データ統合情報」を更新しました
+
+**▶ 次の推奨ステップ（標準フロー）:**
+```
+/data-analysis:data-explore
+```
+統合済みデータの全体像・品質・分布・相関をEDAで把握します
+
+**現在の推奨フロー:**
+```
+data-context → data-define → data-collect → data-integrate ✅ → data-explore → data-clean → data-feature → data-model → data-interpret
+```
 
 $ARGUMENTS

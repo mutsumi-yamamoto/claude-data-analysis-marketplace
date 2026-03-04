@@ -585,6 +585,47 @@ print("SHAP分析完了: data/docs/06_shap_*.png")
 
 ---
 
-分析結果を `analysis_context.md` の「分析経過メモ」に追記し、`data/docs/06_modeling_report.md` にレポートを保存すること。
+## 📝 実行ログの記録（必須）
+
+`data/docs/06_modeling_report.md` にレポートを保存し、`analysis_context.md` の「12. 実行ログ」末尾に以下のテンプレートを埋めて追記すること。
+
+```
+### YYYY-MM-DD HH:MM | data-model
+| 項目 | 内容 |
+|------|------|
+| ステータス | 完了 / 一部完了 / 中断 |
+| 実施内容 | [記述的 / 診断的 / 予測的 / 処方的 / 因果推論] |
+| 採用モデル | [モデル名・ハイパーパラメータ最適化手法] |
+| 評価指標 | [指標名・値・95%CI] |
+| ベースライン比較 | [ベースライン値 → モデル値（改善率%）] |
+| 重要特徴量 | [SHAP上位3件] |
+| 不均衡対応 | [SMOTE / 重み付け / なし] |
+| 過学習チェック | [Train/Test乖離・交差検証結果] |
+| 仮説検証結果 | [支持: H○、棄却: H○、保留: H○] |
+| 問題・懸念 | [モデルの限界・前提条件] |
+| 申し送り | [レポートで強調すべき発見・解釈の注意点] |
+| 生成ファイル | `data/docs/06_modeling_report.md` |
+```
+
+---
+
+## ✅ 完了後: 次の推奨アクション（必須）
+
+上記の実行が完了したら、**必ず**以下をユーザーに提示すること。
+
+**✅ data-model が完了しました**
+📁 生成ファイル: `data/docs/06_modeling_report.md`
+📋 `analysis_context.md` の「分析経過メモ」を更新しました
+
+**▶ 次の推奨ステップ（標準フロー）:**
+```
+/data-analysis:data-interpret
+```
+分析結果を経営層・意思決定者向けに解釈・レポート化します
+
+**現在の推奨フロー:**
+```
+data-context → data-define → data-explore → data-clean → data-feature → data-model ✅ → data-interpret
+```
 
 $ARGUMENTS

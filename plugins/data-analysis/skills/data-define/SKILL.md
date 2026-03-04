@@ -100,4 +100,48 @@ print(f"必要サンプルサイズ: {n:.0f} / グループ")
 
 不確実な点は「不確実性: ○○」として必ず明記すること。
 
+---
+
+## 📝 実行ログの記録（必須）
+
+スキル完了後、以下のテンプレートを埋めて `analysis_context.md` の「12. 実行ログ」末尾に追記すること。
+
+```
+### YYYY-MM-DD HH:MM | data-define
+| 項目 | 内容 |
+|------|------|
+| ステータス | 完了 / 一部完了 / 中断 |
+| 実施内容 | [Issue Tree構築 / KGI・KPI設計 / 仮説リスト作成] |
+| Central Question | [解くべき問いを1文で] |
+| 分析種別 | [記述的 / 診断的 / 予測的 / 処方的 / 因果推論] |
+| 主要KGI | [指標名・目標値] |
+| 仮説数 | [設定した仮説数・主な仮説] |
+| 問題・懸念 | [不確実性・未確定事項] |
+| 申し送り | [EDAで重点確認すべき仮説・変数] |
+```
+
+---
+
+## ✅ 完了後: 次の推奨アクション（必須）
+
+上記の実行が完了したら、**必ず**以下をユーザーに提示すること。
+
+**✅ data-define が完了しました**
+📋 `analysis_context.md` の「分析目的・課題定義」を更新しました
+
+**▶ 次の推奨ステップ（標準フロー）:**
+```
+/data-analysis:data-explore
+```
+定義した仮説をデータで検証するEDA（探索的データ分析）を実施します
+
+**📌 状況別の選択肢:**
+- データがまだ手元にない場合 → `/data-analysis:data-collect`
+- 複数データソースの統合が必要な場合 → `/data-analysis:data-integrate`
+
+**現在の推奨フロー:**
+```
+data-context → data-define ✅ → data-explore → data-clean → data-feature → data-model → data-interpret
+```
+
 $ARGUMENTS

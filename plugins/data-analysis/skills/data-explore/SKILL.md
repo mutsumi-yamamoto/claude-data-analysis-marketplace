@@ -551,6 +551,47 @@ if target_col and target_col in df.columns:
 
 ---
 
-分析結果を `analysis_context.md` の「分析経過メモ」に追記し、`data/docs/01_eda_report.md` にレポートを保存すること。
+## 📝 実行ログの記録（必須）
+
+`data/docs/01_eda_report.md` にレポートを保存し、`analysis_context.md` の「12. 実行ログ」末尾に以下のテンプレートを埋めて追記すること。
+
+```
+### YYYY-MM-DD HH:MM | data-explore
+| 項目 | 内容 |
+|------|------|
+| ステータス | 完了 / 一部完了 / 中断 |
+| 実施内容 | [基本統計 / 分布確認 / 欠損分析 / 相関分析 / 外れ値検出 / 時系列分析] |
+| データ規模 | [行数] 件 × [列数] 列 |
+| 欠損状況 | [最大欠損率・欠損が多い列名] |
+| 外れ値 | [検出件数・対象列・Isolation Forest/LOFスコア] |
+| 分布の特徴 | [歪み・正規性検定結果・変換が必要な列] |
+| 主要相関 | [相関係数上位ペア・多重共線性の懸念] |
+| バイアスチェック | [サバイバーシップ / 選択バイアスの有無] |
+| クレンジング優先対応 | [要対応の列名と処理方針] |
+| 問題・懸念 | [解決できなかった問題・ドメイン専門家確認が必要な事項] |
+| 申し送り | [クレンジングフェーズで特に注意すべき点] |
+| 生成ファイル | `data/docs/01_eda_report.md` |
+```
+
+---
+
+## ✅ 完了後: 次の推奨アクション（必須）
+
+上記の実行が完了したら、**必ず**以下をユーザーに提示すること。
+
+**✅ data-explore が完了しました**
+📁 生成ファイル: `data/docs/01_eda_report.md`
+📋 `analysis_context.md` の「分析経過メモ」を更新しました
+
+**▶ 次の推奨ステップ（標準フロー）:**
+```
+/data-analysis:data-clean
+```
+EDAで発見した欠損・外れ値・型不整合・重複を体系的に処理します
+
+**現在の推奨フロー:**
+```
+data-context → data-define → data-explore ✅ → data-clean → data-feature → data-model → data-interpret
+```
 
 $ARGUMENTS

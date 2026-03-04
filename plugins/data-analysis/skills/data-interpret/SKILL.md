@@ -228,6 +228,43 @@ plt.savefig('data/docs/07_residuals.png', dpi=150)
 
 ---
 
-完成したレポートを `analysis_context.md` の「分析経過メモ」に記録し、成果物一覧を更新すること。
+## 📝 実行ログの記録（必須）
+
+`data/docs/07_executive_summary.md` と `data/docs/08_technical_report.md` を保存し、`analysis_context.md` の成果物一覧を更新した上で、「12. 実行ログ」末尾に以下のテンプレートを埋めて追記すること。
+
+```
+### YYYY-MM-DD HH:MM | data-interpret
+| 項目 | 内容 |
+|------|------|
+| ステータス | 完了 / 一部完了 / 中断 |
+| 実施内容 | [結果解釈 / エグゼクティブサマリー作成 / 技術レポート作成] |
+| 主要結論 | [Central Questionへの回答を1〜2文で] |
+| 根拠（上位3点） | [Key Message A / B / C] |
+| ビジネスインパクト | [定量的な期待効果] |
+| 限界・前提条件 | [結論が覆る条件・適用外ケース] |
+| 未解決・積み残し | [今後の分析課題] |
+| Next Action | 誰が: / 何を: / いつまでに: |
+| 生成ファイル | `data/docs/07_executive_summary.md` / `data/docs/08_technical_report.md` |
+```
+
+---
+
+## ✅ 完了後: 次の推奨アクション（必須）
+
+上記の実行が完了したら、**必ず**以下をユーザーに提示すること。
+
+**✅ data-interpret が完了しました — 分析サイクル完了**
+📁 生成ファイル: `data/docs/07_executive_summary.md` / `data/docs/08_technical_report.md`
+📋 `analysis_context.md` の成果物一覧を更新しました
+
+**🎉 フルサイクル完了:**
+```
+data-context → data-define → data-explore → data-clean → data-feature → data-model → data-interpret ✅
+```
+
+**📌 次のアクション（新規プロジェクトまたは追加分析）:**
+- 別の問いを分析したい場合 → `/data-analysis:data-context`（新しいコンテキストを設定）
+- 仮説を追加してモデルを再実行したい場合 → `/data-analysis:data-model`
+- レポートを作り直したい場合 → `/data-analysis:data-interpret`
 
 $ARGUMENTS

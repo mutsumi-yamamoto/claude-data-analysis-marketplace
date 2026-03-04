@@ -200,6 +200,46 @@ shap.summary_plot(shap_values, X_test, feature_names=X_train.columns)
 
 ---
 
-特徴量一覧と選定根拠を `data/docs/05_feature_engineering.md` に保存すること。
+## 📝 実行ログの記録（必須）
+
+`data/docs/05_feature_engineering.md` に保存し、`analysis_context.md` の「12. 実行ログ」末尾に以下のテンプレートを埋めて追記すること。
+
+```
+### YYYY-MM-DD HH:MM | data-feature
+| 項目 | 内容 |
+|------|------|
+| ステータス | 完了 / 一部完了 / 中断 |
+| 実施内容 | [数値変換 / カテゴリエンコード / 時系列特徴量 / 交互作用項 / 次元削減] |
+| 元の特徴量数 | [件数] |
+| 作成した特徴量 | [件数]（数値変換: [件]、カテゴリ: [件]、時系列: [件]） |
+| リーケージ除外 | [件数]（除外理由: [内容]） |
+| VIF除外 | [件数]（VIF > 10 の列名） |
+| 最終特徴量数 | [件数] |
+| 重要特徴量候補 | [モデリング前の予測特徴量トップ3] |
+| 問題・懸念 | [ターゲットリーケージ疑い・VIF問題等] |
+| 申し送り | [モデリングで使用する特徴量セット・注意点] |
+| 生成ファイル | `data/docs/05_feature_engineering.md` |
+```
+
+---
+
+## ✅ 完了後: 次の推奨アクション（必須）
+
+上記の実行が完了したら、**必ず**以下をユーザーに提示すること。
+
+**✅ data-feature が完了しました**
+📁 生成ファイル: `data/docs/05_feature_engineering.md`
+📋 `analysis_context.md` の「分析経過メモ」を更新しました
+
+**▶ 次の推奨ステップ（標準フロー）:**
+```
+/data-analysis:data-model
+```
+設計した特徴量を用いてモデリング・統計分析を実施します
+
+**現在の推奨フロー:**
+```
+data-context → data-define → data-explore → data-clean → data-feature ✅ → data-model → data-interpret
+```
 
 $ARGUMENTS

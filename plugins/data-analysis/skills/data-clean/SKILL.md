@@ -596,6 +596,48 @@ print(lineage)
 
 ---
 
-クレンジング結果を `analysis_context.md` の「分析経過メモ」に追記し、`data/docs/02_cleaning_report.md` にレポートを保存すること。
+## 📝 実行ログの記録（必須）
+
+`data/docs/02_cleaning_report.md` にレポートを保存し、`analysis_context.md` の「12. 実行ログ」末尾に以下のテンプレートを埋めて追記すること。
+
+```
+### YYYY-MM-DD HH:MM | data-clean
+| 項目 | 内容 |
+|------|------|
+| ステータス | 完了 / 一部完了 / 中断 |
+| 実施内容 | [型強制 / 欠損補完 / 外れ値処理 / 重複除去 / 正規化 / 名寄せ] |
+| 処理前件数 | [行数] |
+| 処理後件数 | [行数]（削除: [件]、追加: [件]) |
+| 欠損処理 | [補完方法・対象列・件数] |
+| 外れ値処理 | [判定基準（IQR/3σ）・件数・対象列] |
+| 重複除去 | [削除件数] |
+| 正規化・名寄せ | [実施内容・対象列] |
+| メモリ削減 | [削減率]% |
+| 問題・懸念 | [解決できなかった問題・ドメイン判断が必要な事項] |
+| 申し送り | [特徴量エンジニアリングで注意すべき点] |
+| 生成ファイル | `data/docs/02_cleaning_report.md` / `data/cleaned_data.csv` |
+```
+
+---
+
+## ✅ 完了後: 次の推奨アクション（必須）
+
+上記の実行が完了したら、**必ず**以下をユーザーに提示すること。
+
+**✅ data-clean が完了しました**
+📁 生成ファイル: `data/docs/02_cleaning_report.md`
+📁 クレンジング済みデータ: `data/cleaned_data.csv`
+📋 `analysis_context.md` の「分析経過メモ」を更新しました
+
+**▶ 次の推奨ステップ（標準フロー）:**
+```
+/data-analysis:data-feature
+```
+クレンジング済みデータをもとに特徴量を設計・生成します
+
+**現在の推奨フロー:**
+```
+data-context → data-define → data-explore → data-clean ✅ → data-feature → data-model → data-interpret
+```
 
 $ARGUMENTS
